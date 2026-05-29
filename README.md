@@ -1,4 +1,4 @@
-# NNCNC Mobile App 🚀
+# NNCNC Mobile App 
 
 Welcome to the official repository for the **NNCNC** mobile application. This repository hosts the public marketing landing page for our global audience.
 
