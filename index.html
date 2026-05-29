@@ -3,138 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NNCNC — Speed & Distance Tracker</title>
+    <title>NNCNC — High-Performance Cycling</title>
     <style>
         :root {
-            --bg-color: #111416;
-            --accent-color: #d5ff1c;
-            --text-color: #ffffff;
-            --muted-color: #5d6367;
+            --bg: #000000;
+            --accent: #d5ff1c;
+            --text-main: #ffffff;
+            --text-muted: #86868b; /* Точный цвет текста Apple */
+            --border: #222224;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 40px 24px;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.4;
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: -0.01em;
         }
         .container {
-            max-width: 1200px;
-            width: 100%;
+            max-width: 980px; /* Стандартная ширина контентной зоны Apple */
             margin: 0 auto;
+            padding: 0 40px;
         }
         header {
+            padding: 48px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 40px;
         }
         .logo {
-            font-size: 24px;
-            font-weight: 900;
+            font-size: 22px;
+            font-weight: 700;
             letter-spacing: -0.03em;
-            text-transform: uppercase;
         }
-        .status-badge {
-            font-size: 14px;
-            color: var(--accent-color);
-            font-family: monospace;
+        .logo span {
+            color: var(--accent);
+        }
+        .status {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .status::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent);
+            border-radius: 50%;
         }
         .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 60px;
-            padding: 40px 0;
+            padding: 100px 0 140px 0;
         }
-        .display-data {
-            font-family: monospace, sans-serif;
-        }
-        .speed {
-            font-size: clamp(4rem, 10vw, 8rem);
-            font-weight: 900;
-            color: var(--accent-color);
-            line-height: 1;
-            letter-spacing: -0.04em;
-        }
-        .unit {
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            color: var(--text-color);
+        .manifesto {
+            font-size: clamp(3.2rem, 7vw, 5.5rem);
             font-weight: 700;
-            text-transform: uppercase;
-            margin-top: 5px;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 60px;
         }
-        .action-circle {
-            width: clamp(180px, 25vw, 260px);
-            height: clamp(180px, 25vw, 260px);
-            background-color: var(--accent-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 20px 50px rgba(213, 255, 28, 0.15);
+        .manifesto span {
+            color: var(--text-muted);
+            display: block;
+            font-weight: 600;
         }
-        .action-circle:hover {
-            transform: scale(1.04);
+        .manifesto .highlight {
+            color: var(--text-main);
+            display: inline;
         }
-        .play-icon {
-            width: 0;
-            height: 0;
-            border-top: clamp(20px, 3vw, 30px) solid transparent;
-            border-bottom: clamp(20px, 3vw, 30px) solid transparent;
-            border-left: clamp(35px, 5vw, 50px) solid #111416;
-            margin-left: clamp(8px, 1.5vw, 12px);
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+            padding: 80px 0;
+            border-top: 1px solid var(--border);
         }
-        .download-box {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
+        .developer-profile {
+            max-width: 600px;
         }
-        .btn {
-            background: #191d20;
-            color: var(--text-color);
-            padding: 16px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            border: 1px solid rgba(255,255,255,0.03);
-            text-transform: uppercase;
-            letter-spacing: 0.02em;
-            transition: background 0.2s;
-        }
-        .btn:hover {
-            background: #22272b;
-        }
-        footer {
-            text-align: center;
-            color: var(--muted-color);
-            font-size: 0.75rem;
-            font-family: monospace;
+        .section-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            margin-top: 40px;
+            margin-bottom: 24px;
         }
-        @media (min-width: 800px) {
-            .hero {
-                flex-direction: row;
-                justify-content: space-around;
-                text-align: left;
-                padding: 80px 0;
-            }
-            .hero-left {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .description {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        footer {
+            padding: 60px 0 40px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 400;
+        }
+        @media (min-width: 768px) {
+            .concept-grid {
+                grid-template-columns: 1.2fr 1fr;
+                gap: 40px;
             }
         }
     </style>
@@ -143,32 +126,41 @@
 
 <div class="container">
     <header>
-        <div class="logo">NNCNC</div>
-        <div class="status-badge">bike status: live</div>
+        <div class="logo">NNCNC<span>.</span></div>
+        <div class="status">In Development</div>
     </header>
 
-    <main class="hero">
-        <div class="hero-left">
-            <div class="display-data">
-                <div class="speed">00.0</div>
-                <div class="unit">km/h tracking</div>
+    <main>
+        <section class="hero">
+            <!-- Главный манифест с расшифровкой бренда -->
+            <h1 class="manifesto">
+                <span>No Noise.</span>
+                <span>No Clutter.</span>
+                <span class="highlight">Next-gen Cycling.</span>
+            </h1>
+        </section>
+
+        <section class="concept-grid">
+            <div class="developer-profile">
+                <div class="section-label">The Developer</div>
+                <h2>Designed for absolute focus.</h2>
+                <p class="description">
+                    As a developer and cyclist, I built NNCNC to eliminate the digital noise of modern telemetry. Inspired by hardware computers and high-performance engineering, this tracker brings core metrics to the front with uncompromising speed and visual clarity.
+                </p>
             </div>
-            <div class="download-box">
-                <a href="#" class="btn">App Store</a>
-                <a href="#" class="btn">Google Play</a>
+            
+            <div class="app-philosophy">
+                <div class="section-label">The Core</div>
+                <h2>Zero distraction.</h2>
+                <p class="description">
+                    Every pixel is optimized for real-time tracking on the road. No corporate layers, no bloated features. Just raw speed, pure geometry, and the open road.
+                </p>
             </div>
-        </div>
-        
-        <div class="hero-right">
-            <!-- Крупная кнопка "Старт", как в самом приложении -->
-            <a href="#" class="action-circle" title="Get the App">
-                <div class="play-icon"></div>
-            </a>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <p>NNCNC LAB &copy; 2026 // ZERO DISTRACTIONS</p>
+        <p>Designed and coded by iMakken &copy; 2026 NNCNC Lab. All rights reserved.</p>
     </footer>
 </div>
 
