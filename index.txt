@@ -141,13 +141,13 @@
                 <p class="subtitle">NNCNC helps you organize your daily routine, track goals, and boost productivity with an intuitive interface designed for global creators.</p>
                 
                 <div class="buttons">
-                    <!-- ‡àìåíèòå # íà ðåàëüíûå ññûëêè íà ìàðêåòû, êîãäà îíè ïîßâßòñß -->
+                    <!-- â€¡Ã Ã¬Ã¥Ã­Ã¨Ã²Ã¥ # Ã­Ã  Ã°Ã¥Ã Ã«Ã¼Ã­Ã»Ã¥ Ã±Ã±Ã»Ã«ÃªÃ¨ Ã­Ã  Ã¬Ã Ã°ÃªÃ¥Ã²Ã», ÃªÃ®Ã£Ã¤Ã  Ã®Ã­Ã¨ Ã¯Ã®ÃŸÃ¢ÃŸÃ²Ã±ÃŸ -->
                     <a href="#" class="btn">Download for iOS</a>
                     <a href="#" class="btn">Download for Android</a>
                 </div>
             </div>
             
-            <!-- ‡àãëóøêà äëß ñêðèíøîòà ñìàðòôîíà. ‡àìåíèòå íà ñâîå èçîáðàæåíèå ïîçæå -->
+            <!-- â€¡Ã Ã£Ã«Ã³Ã¸ÃªÃ  Ã¤Ã«ÃŸ Ã±ÃªÃ°Ã¨Ã­Ã¸Ã®Ã²Ã  Ã±Ã¬Ã Ã°Ã²Ã´Ã®Ã­Ã . â€¡Ã Ã¬Ã¥Ã­Ã¨Ã²Ã¥ Ã­Ã  Ã±Ã¢Ã®Ã¥ Ã¨Ã§Ã®Ã¡Ã°Ã Ã¦Ã¥Ã­Ã¨Ã¥ Ã¯Ã®Ã§Ã¦Ã¥ -->
             <img src="https://placeholder.com" alt="NNCNC App Screenshot" class="app-mockup">
         </section>
 
