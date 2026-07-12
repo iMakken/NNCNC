@@ -15,7 +15,7 @@ A private, minimalist bike tracker. Three numbers and silence: speed, distance, 
 
 ## Status
 
-🚧 In development. Android field testing in progress.
+🚧 In development. Android field testing in progress (Jule 2026)
 
 ## About this repository
 
