@@ -1,43 +1,27 @@
-# NNCNC Mobile App 
+# NNCNC
 
-Welcome to the official repository for the **NNCNC** mobile application. This repository hosts the public marketing landing page for our global audience.
+**No Noise. No Clutter. Nothing but Cycling.**
 
-👉 **Live Landing Page:** [https://github.io](https://github.io)
+A private, minimalist bike tracker. Three numbers and silence: speed, distance, time — plus an odometer that knows when your chain needs service.
 
----
+👉 **Landing page:** https://imakken.github.io/nncnc/
 
-## 📱 About the App
+## What makes it different
 
-**NNCNC** is a smart, minimalist mobile application designed for global creators, remote workers, and tech enthusiasts. It helps users manage tasks effortlessly, organize daily routines, and boost productivity without distractions.
+- **No account. No cloud. No server exists** — your rides never leave your phone
+- **No ads. No subscription.** Free forever, one-time Pro if you want to say thanks
+- **No noise** — no feed, no followers, no notifications begging you to ride
+- Your route becomes abstract glowing line art — beautiful to share, reveals nothing about where you live
 
-### Key Features:
-*   **⚡ Lightning Fast Sync:** Instant data replication across all user devices.
-*   **🔒 Privacy First:** Fully encrypted local and cloud storage. Only you own your data.
-*   **🎨 Clean Modern UI:** A beautiful dark mode interface tailored for deep focus.
+## Status
 
----
+🚧 In development. Android field testing in progress.
 
-## 🌐 Landing Page Tech Stack
+## About this repository
 
-The promotional website hosted in this repository is built using clean, high-performance web standards to ensure instant loading speeds globally:
-*   **HTML5** — Semantic structure for maximum SEO and accessibility.
-*   **CSS3** — Custom properties (variables), modern CSS Grid, and Flexbox for native responsiveness.
-*   **GitHub Pages** — Automated deployment and worldwide CDN delivery.
+This repo hosts the public landing page only. The application source code lives in a private repository.
 
 ---
 
-## 🛠️ How to View & Modify Locally
-
-If you want to clone this repository and make changes to the landing page layout:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/iMakken/nncnc.git
-   ```
-2. Open `index.html` in any web browser to preview changes.
-
----
-
-## 📄 License
-
+*Built by one person who wanted a bike computer, an odometer and quiet.*
 This project is licensed under the MIT License - see the local files for details.
