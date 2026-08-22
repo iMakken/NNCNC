@@ -9,7 +9,7 @@ A private, minimalist bike tracker. Four numbers and silence: speed, distance, t
 ## What makes it different
 
 - **No account. No cloud. No server exists** — your rides never leave your phone
-- **No ads. No subscription.** Free forever, one-time Pro if you want to say thanks
+- **No ads. No subscription.** Free forever, one-time VIP if you want to say thanks
 - **No noise** — no feed, no followers, no notifications begging you to ride
 - Your route becomes abstract glowing line art — beautiful to share, reveals nothing about where you live
 
