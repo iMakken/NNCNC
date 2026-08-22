@@ -301,3 +301,48 @@
         
         <h3>3. Data Sharing and Third Parties</h3>
         <p>We do not sell, trade, or rent your personal or location data to third parties. All route telemetry data remains your personal property and resides safely on your physical device.</p>
+        <p style="margin-top: 8px;">We may use trusted third-party analytics services (such as Google Analytics for Firebase or Apple Crashlytics) to collect aggregated, anonymous statistics to improve application stability. These services do not receive your precise location trails.</p>
+        
+        <h3>4. Security</h3>
+        <p>We value your trust. We implement standard security measures to protect your local data. However, please remember that no method of transmission over the internet or method of electronic storage is 100% secure.</p>
+        
+        <h3>5. Children's Privacy</h3>
+        <p>Our Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+        
+        <h3>6. Changes to This Privacy Policy</h3>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top.</p>
+        
+        <h3>7. Contact Us</h3>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <strong>support@nncnc.app</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const privacyLink = document.getElementById('privacyLink');
+    const privacyModal = document.getElementById('privacyModal');
+    const closeModal = document.getElementById('closeModal');
+
+    // Открытие модального окна
+    privacyLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      privacyModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Закрытие по кнопке Close
+    closeModal.addEventListener('click', () => {
+      privacyModal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Закрытие по клику мимо окна
+    privacyModal.addEventListener('click', (e) => {
+      if (e.target === privacyModal) {
+        privacyModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>
