@@ -2,7 +2,7 @@
 
 **No Noise. No Clutter. Nothing but Cycling.**
 
-A private, minimalist bike tracker. Three numbers and silence: speed, distance, time — plus an odometer that knows when your chain needs service.
+A private, minimalist bike tracker. Four numbers and silence: speed, distance, time — plus an odometer that knows when your chain needs service.
 
 👉 **Landing page:** https://imakken.github.io/nncnc/
 
@@ -15,7 +15,7 @@ A private, minimalist bike tracker. Three numbers and silence: speed, distance, 
 
 ## Status
 
-🚧 In development. Android field testing in progress (July, 2026)
+🚧 In development. Android + iOS field testing in progress (August, 2026). 70% completed.
 
 ## About this repository
 
