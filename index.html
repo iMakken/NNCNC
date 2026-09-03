@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NNCNC — A private, minimalist bike tracker app. Speed, distance, time, and telemetry without digital noise, accounts, or cloud tracking. Free forever.">
-  <meta name="keywords" content="bike tracker, cycling computer, minimalist cycling app, private gps tracker, velocity telemetry, stratumport, nncnc">
-
+  <meta name="description" content="NNCNC — A private, minimalist bike tracker app. Speed, distance, time, and telemetry without digital noise, accounts, or cloud tracking.">
+  <meta name="keywords" content="bike tracker, cycling computer, minimalist cycling app, private gps tracker, velocity telemetry, nncnc">
+  <meta name="theme-color" content="#000000">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjI4IiBmaWxsPSIjMDAwMDAwIi8+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMTUiIGZpbGw9IiNkNWZmMWMiLz48L3N2Zz4=">
   <title>NNCNC — High-Performance Cycling</title>
   <style>
@@ -13,15 +13,16 @@
       --bg: #000000;
       --accent: #d5ff1c;
       --text-main: #ffffff;
-      --text-muted: #86868b; /* Точный цвет текста Apple */
+      --text-muted: #86868b;
       --border: #222224;
-      --modal-bg: #1c1c1e;
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
       background-color: var(--bg);
@@ -30,36 +31,46 @@
       -webkit-font-smoothing: antialiased;
       letter-spacing: -0.01em;
     }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
     .container {
-      max-width: 980px; /* Стандартная ширина контентной зоны Apple */
+      max-width: 980px;
       margin: 0 auto;
       padding: 0 40px;
     }
+
     header {
       padding: 48px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     .logo {
       font-size: 22px;
       font-weight: 700;
       letter-spacing: -0.03em;
     }
+
     .logo span {
       color: var(--accent);
     }
-           .status {
+
+    .status {
       font-size: 12px;
       font-weight: 500;
       color: var(--text-muted);
       display: flex;
       align-items: center;
       gap: 8px;
-      text-transform: uppercase; /* ТЕКУЩАЯ СТРОКА */
+      text-transform: uppercase;
       letter-spacing: 0.05em;
     }
-
 
     .status::before {
       content: "";
@@ -69,9 +80,11 @@
       background-color: var(--accent);
       border-radius: 50%;
     }
+
     .hero {
       padding: 100px 0 140px 0;
     }
+
     .manifesto {
       font-size: clamp(3.2rem, 7vw, 5.5rem);
       font-weight: 700;
@@ -79,15 +92,18 @@
       letter-spacing: -0.03em;
       margin-bottom: 60px;
     }
+
     .manifesto span {
       color: var(--text-muted);
       display: block;
       font-weight: 600;
     }
+
     .manifesto .highlight {
       color: var(--text-main);
       display: inline;
     }
+
     .concept-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -95,9 +111,11 @@
       padding: 80px 0;
       border-top: 1px solid var(--border);
     }
+
     .developer-profile {
       max-width: 600px;
     }
+
     .section-label {
       font-size: 14px;
       font-weight: 600;
@@ -106,18 +124,21 @@
       letter-spacing: 0.1em;
       margin-bottom: 24px;
     }
+
     h2 {
       font-size: 2rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 16px;
     }
+
     .description {
       font-size: 1.25rem;
       color: var(--text-muted);
       line-height: 1.5;
       font-weight: 400;
     }
+
     footer {
       padding: 60px 0 40px 0;
       border-top: 1px solid var(--border);
@@ -129,162 +150,73 @@
       flex-wrap: wrap;
       gap: 16px;
     }
+
     footer a {
       color: var(--text-muted);
       text-decoration: none;
       transition: color 0.2s ease;
     }
+
     footer a:hover {
       color: var(--text-main);
     }
 
-    /* Модальное окно политики конфиденциальности в стиле Apple */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-    .modal-overlay.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .modal-content {
-      background-color: var(--modal-bg);
-      border: 1px solid var(--border);
-      width: 90%;
-      max-width: 640px;
-      max-height: 80vh;
-      border-radius: 20px;
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      transform: scale(0.95);
-      transition: transform 0.3s ease;
-    }
-    .modal-overlay.active .modal-content {
-      transform: scale(1);
-    }
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 24px;
-      padding-bottom: 16px;
+    .announcement-banner {
+      background-color: #111112;
       border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 12px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
     }
-    .modal-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-    .modal-body {
-      overflow-y: auto;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      padding-right: 8px;
-    }
-    .modal-body::-webkit-scrollbar {
-      width: 6px;
-    }
-    .modal-body::-webkit-scrollbar-thumb {
-      background: var(--border);
-      border-radius: 3px;
-    }
-    .modal-body h3 {
+
+    .announcement-banner a {
       color: var(--text-main);
-      font-size: 1.1rem;
-      margin: 24px 0 8px 0;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      display: inline-block;
+    }
+
+    .announcement-banner a span {
+      color: var(--accent);
       font-weight: 600;
     }
-    .modal-body h3:first-child {
-      margin-top: 0;
-    }
-    .modal-body ul {
-      margin-left: 20px;
-      margin-bottom: 16px;
-    }
-    .close-btn {
-      background: var(--border);
-      color: var(--text-main);
-      border: none;
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-    .close-btn:hover {
-      background: #2c2c2e;
+
+    .announcement-banner a:hover {
+      color: var(--accent);
     }
 
-.announcement-banner {
-    background-color: #111112; /* Чуть светлее глубокого черного */
-    border-bottom: 1px solid var(--border);
-    text-align: center;
-    padding: 12px 20px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-}
-.announcement-banner a {
-    color: var(--text-main);
-    text-decoration: none;
-    transition: color 0.2s ease;
-    display: inline-block;
-}
-.announcement-banner a span {
-    color: var(--accent); /* Подсветим слово Telegram неоновым */
-    font-weight: 600;
-}
-.announcement-banner a:hover {
-    color: var(--accent);
-}
-
-    
-        @media (min-width: 768px) {
+    @media (min-width: 768px) {
       .concept-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
       }
     }
-
-    }
   </style>
 </head>
 <body>
-<div class="announcement-banner">
+  <div class="announcement-banner">
     <a href="https://t.me/nncnc_bike" target="_blank" rel="noopener">
-        Launching October 2026. Follow raw updates on <span>Telegram →</span>
+      Launching October 2026. Follow raw updates on <span>Telegram →</span>
     </a>
-</div>
+  </div>
 
   <div class="container">
     <header>
       <div class="logo">NNCNC<span>.</span></div>
       <div class="status">in development</div>
     </header>
+
     <main>
       <section class="hero">
         <h1 class="manifesto">
           <span>No Noise.</span>
-          <span>no Clutter.</span>
+          <span>No Clutter.</span>
           <span class="highlight">Nothing but Cycling.</span>
         </h1>
       </section>
+
       <section class="concept-grid">
         <div class="developer-profile">
           <div class="section-label">The Developer</div>
@@ -293,6 +225,7 @@
             As a developer and cyclist, I built NNCNC to eliminate the digital noise of modern telemetry. Inspired by hardware computers and high-performance engineering, this tracker brings core metrics to the front with uncompromising speed and visual clarity.
           </p>
         </div>
+
         <div class="app-philosophy">
           <div class="section-label">The Core</div>
           <h2>Zero distraction.<br>Pure road.</h2>
@@ -303,93 +236,18 @@
 
         <div class="app-pricing">
           <div class="section-label">The Price</div>
-          <h2>Free forever.<br>Truly free.</h2>
+          <h2>Free forever.<br>No subscriptions.</h2>
           <p class="description">
-            No accounts. No cloud servers. No subscriptions or invasive ads begging for your money. Your data never leaves your device. 100% free, because private cycling should not be a commodity.
+            No accounts. No cloud servers. No ads. Every core feature is free and stays free — there is no trial and nothing is locked behind a paywall.
           </p>
         </div>
-
-        
       </section>
     </main>
+
     <footer>
       <p>Designed and coded by iMakken &copy; 2026 NNCNC Lab. All rights reserved.</p>
-      <p><a href="#" id="privacyLink">Privacy Policy</a></p>
+      <p><a href="/privacy">Privacy Policy</a></p>
     </footer>
   </div>
-
-  <!-- Модальное окно с текстом политики конфиденциальности -->
-  <div class="modal-overlay" id="privacyModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="modal-title">Privacy Policy</div>
-        <button class="close-btn" id="closeModal">Close</button>
-      </div>
-      <div class="modal-body">
-        <p style="margin-bottom: 16px;"><strong>Last updated: August 22, 2026</strong></p>
-        <p>NNCNC ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application NNCNC (the "Application") and our website nncnc.app.</p>
-        <p style="margin-top: 8px;">By using the Application, you agree to the collection and use of information in accordance with this policy.</p>
-        
-        <h3>1. Information We Collect</h3>
-        <p><strong>Precise Location Data (GPS):</strong> To provide our core cycling tracking features (speed, distance, routing, and telemetry), the Application requires access to your device’s precise location services.</p>
-        <ul>
-          <li><strong>Background Location:</strong> If permitted, the Application may collect your location data in the background (even when the app is closed or not in use) to ensure your continuous cycling route is recorded accurately.</li>
-          <li><strong>Storage:</strong> Your route and location data are stored locally on your device. We do not upload your raw GPS coordinates to external servers unless you explicitly choose to export your data.</li>
-        </ul>
-        <p><strong>Device Information:</strong> We may collect basic, non-identifiable technical data about your mobile device, including device model, operating system version, and unique device identifiers for crash reporting and performance optimization.</p>
-        
-        <h3>2. How We Use Your Information</h3>
-        <p>We use the collected data solely to:</p>
-        <ul>
-          <li>Provide, maintain, and improve the core tracking features of the Application.</li>
-          <li>Calculate cycling analytics such as current/average speed, distance, elevation, and time.</li>
-          <li>Troubleshoot technical issues and fix bugs.</li>
-        </ul>
-        
-        <h3>3. Data Sharing and Third Parties</h3>
-        <p>We do not sell, trade, or rent your personal or location data to third parties. All route telemetry data remains your personal property and resides safely on your physical device.</p>
-        <p style="margin-top: 8px;">We may use trusted third-party analytics services (such as Google Analytics for Firebase or Apple Crashlytics) to collect aggregated, anonymous statistics to improve application stability. These services do not receive your precise location trails.</p>
-        
-        <h3>4. Security</h3>
-        <p>We value your trust. We implement standard security measures to protect your local data. However, please remember that no method of transmission over the internet or method of electronic storage is 100% secure.</p>
-        
-        <h3>5. Children's Privacy</h3>
-        <p>Our Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
-        
-        <h3>6. Changes to This Privacy Policy</h3>
-        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top.</p>
-        
-        <h3>7. Contact Us</h3>
-        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <strong>imakkenpro@gmail.com</strong></p>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const privacyLink = document.getElementById('privacyLink');
-    const privacyModal = document.getElementById('privacyModal');
-    const closeModal = document.getElementById('closeModal');
-
-    // Открытие модального окна
-    privacyLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      privacyModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-
-    // Закрытие по кнопке Close
-    closeModal.addEventListener('click', () => {
-      privacyModal.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-
-    // Закрытие по клику мимо окна
-    privacyModal.addEventListener('click', (e) => {
-      if (e.target === privacyModal) {
-        privacyModal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-  </script>
 </body>
 </html>
