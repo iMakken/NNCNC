@@ -4,7 +4,7 @@
 
 A private, minimalist bike tracker. Four numbers and silence: speed, distance, time — plus an odometer that knows when your chain needs service.
 
-👉 **Landing page:** https://imakken.github.io/nncnc/
+👉 **Landing page:** https://nncnc.app/
 
 ## What makes it different
 
@@ -15,7 +15,7 @@ A private, minimalist bike tracker. Four numbers and silence: speed, distance, t
 
 ## Status
 
-🚧 In development. Android + iOS field testing in progress (August, 2026). 70% completed.
+🚧 In development. Android + iOS field testing in progress (September, 2026). 95% completed.
 
 ## About this repository
 
