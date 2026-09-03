@@ -171,7 +171,7 @@
 
     <main class="policy">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: [DATE] · Applies to the NNCNC mobile application and the website nncnc.app</p>
+      <p class="updated">Last updated: 03-09-2026 · Applies to the NNCNC mobile application and the website nncnc.app</p>
 
       <p class="lede">
         NNCNC records your rides entirely on your phone. There is no NNCNC server. We have no account system, no analytics, and no ads, and we never receive your GPS coordinates or any other ride data. This is not a promise about how we handle your data — we operate no infrastructure capable of receiving it.
@@ -229,7 +229,7 @@
       <p>We may update this policy as the app develops. The current version is always published at nncnc.app/privacy, and the date at the top shows when it last changed.</p>
 
       <h2>10. Contact</h2>
-      <p><a class="inline" href="mailto:[EMAIL]">[EMAIL]</a></p>
+      <p><a class="inline" href="mailto:imakkenpro@gmail.com">[EMAIL]</a></p>
     </main>
 
     <footer>
