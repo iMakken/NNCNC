@@ -1,6 +1,6 @@
 # NNCNC
 
-**No Noise. No Clutter. Nothing but Cycling.**
+**no noise. no clutter. nothing but cycling.**
 
 A private, minimalist bike tracker. Four numbers and silence: speed, distance, time, average speed — plus an odometer that knows when your chain needs service.
 
@@ -14,8 +14,7 @@ A private, minimalist bike tracker. Four numbers and silence: speed, distance, t
 - Your route becomes abstract glowing line art — beautiful to share, reveals nothing about where you live
 
 ## Status
-
-🚧 In development. Android + iOS field testing in progress (September, 2026). 95% completed.
+🚀 Feature-complete. Field-tested on Android and iOS. App Store submission in progress (September 2026).
 
 ## About this repository
 
