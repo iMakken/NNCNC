@@ -2,7 +2,7 @@
 
 **No Noise. No Clutter. Nothing but Cycling.**
 
-A private, minimalist bike tracker. Four numbers and silence: speed, distance, time — plus an odometer that knows when your chain needs service.
+A private, minimalist bike tracker. Four numbers and silence: speed, distance, time, average speed — plus an odometer that knows when your chain needs service.
 
 👉 **Landing page:** https://nncnc.app/
 
