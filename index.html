@@ -97,7 +97,35 @@
     }
 
     .hero {
-      padding: 100px 0 140px 0;
+      padding: 80px 0 120px 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero .manifesto {
+      margin-bottom: 0;
+    }
+
+    .hero-shot img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 28px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: 1.3fr 1fr;
+        gap: 40px;
+      }
+
+      .hero-shot img {
+        margin: 0 0 0 auto;
+      }
     }
 
     .manifesto {
@@ -227,9 +255,12 @@
       <section class="hero">
         <h1 class="manifesto">
           <span>No Noise.</span>
-          <span>no Clutter.</span>
+          <span>No Clutter.</span>
           <span class="highlight">Nothing but Cycling.</span>
         </h1>
+        <div class="hero-shot">
+          <img src="/img/screen.png" alt="NNCNC main screen showing speed, distance and ride time">
+        </div>
       </section>
 
       <section class="concept-grid">
