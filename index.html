@@ -262,6 +262,46 @@
       color: var(--accent);
     }
 
+    .get-app {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .get-app h2 {
+      margin-bottom: 24px;
+    }
+
+    .store-link {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      padding: 14px 28px;
+      border-radius: 980px;
+      transition: opacity 0.2s ease;
+    }
+
+    .store-link:hover {
+      opacity: 0.85;
+    }
+
+    .get-app-qr img {
+      width: 180px;
+      height: 180px;
+      display: block;
+      background: #fff;
+      padding: 12px;
+      border-radius: 16px;
+    }
+    
     @media (min-width: 768px) {
       .concept-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -273,14 +313,14 @@
 <body>
   <div class="announcement-banner">
     <a href="https://t.me/nncnc_bike" target="_blank" rel="noopener">
-      Launching September 2026. Follow raw updates on <span>Telegram →</span>
+      Released 15 September 2026. Follow raw updates on <span>Telegram →</span>
     </a>
   </div>
 
   <div class="container">
     <header>
       <div class="logo">NNCNC<span>.</span></div>
-      <div class="status">ready · submitting</div>
+      <div class="status">ready</div>
     </header>
 
     <main>
@@ -303,7 +343,7 @@
             As a developer and cyclist, I built NNCNC to eliminate the digital noise of modern telemetry. Inspired by hardware computers and high-performance engineering, this tracker brings core metrics to the front with uncompromising speed and visual clarity.
           </p>
         </div>
-
+        
         <div class="app-philosophy">
           <div class="section-label">The Core</div>
           <h2>Your bike.<br>Not just your ride.</h2> 
@@ -325,6 +365,17 @@
         <img src="/img/screen3.png" alt="NNCNC ride history with per-ride effort score">
       </section>
 
+      <section class="get-app">
+        <div class="get-app-text">
+          <div class="section-label">Available now</div>
+          <h2>Free on the<br>App Store.</h2>
+          <a class="store-link" href="https://apps.apple.com/app/id6808987002">Download for iPhone →</a>
+        </div>
+        <div class="get-app-qr">
+          <img src="/img/qr.png" alt="QR code linking to NNCNC on the App Store">
+        </div>
+      </section>
+      
     <footer>
       <p>Designed and coded by iMakken &copy; 2026 NNCNC Lab · Individual Entrepreneur Andrei Akentev. All rights reserved.</p>
       <p><a href="/privacy">Privacy Policy</a></p>
