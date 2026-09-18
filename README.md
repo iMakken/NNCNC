@@ -14,7 +14,7 @@ A private, minimalist bike tracker. Four numbers and silence: speed, distance, t
 - Your route becomes abstract glowing line art — beautiful to share, reveals nothing about where you live
 
 ## Status
-🚀 Feature-complete. Field-tested on Android and iOS. App Store submission in progress (September 2026).
+🚀 Released 15 September 2026.
 
 ## About this repository
 
