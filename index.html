@@ -150,17 +150,70 @@
     .showcase img:last-child {
       transform: translateY(16px);
     }
-    
+
+    .features {
+      padding: 80px 0 0 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .feature-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .feature-list .feature-row:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .feature-shot img {
+      width: 100%;
+      max-width: 240px;
+      height: auto;
+      border-radius: 28px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .feature-text h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+
+    .feature-text p {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .feature-text p + p {
+      margin-top: 14px;
+    }
+
+    .features-cta {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
     @media (min-width: 768px) {
-      .hero {
-        grid-template-columns: 1.3fr 1fr;
-        gap: 40px;
+      .feature-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
       }
 
-      .hero-shot img {
-        margin: 0 0 0 auto;
+      .feature-list .feature-row:nth-child(even) .feature-shot {
+        order: 2;
       }
     }
+
+    
 
     .manifesto {
       font-size: clamp(1.2rem, 5vw, 3.5rem);
@@ -393,7 +446,78 @@
           </a>
         </div>
       </section>
+      <section class="features">
+        <div class="section-label">What it does</div>
 
+        <div class="feature-list">
+          <div class="feature-row">
+            <div class="feature-shot"><img src="/img/list1.jpg" alt="NNCNC home screen with the main metric enlarged"></div>
+            <div class="feature-text">
+              <h3>Your number, up front.</h3>
+              <p>Most bike computers have already decided that speed is the most important thing on your screen. NNCNC lets you decide. Swipe up or down on the big number and it moves through speed, distance, time and average — whichever one matters on this ride takes the large slot, and the other three stay below in smaller type.</p>
+              <p>The gesture works without looking: one thumb, no menu, nothing to confirm. On a climb you might want average. On the way to work, time. On a long ride, distance. The screen follows whatever you're actually thinking about.</p>
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-shot"><img src="/img/list2.jpg" alt="Odometer on the NNCNC home screen"></div>
+            <div class="feature-text">
+              <h3>The odometer is always there.</h3>
+              <p>Total kilometres for the current bike sit on the home screen, not behind a statistics tab three taps deep. You see them every time you start a ride.</p>
+              <p>That placement is deliberate, because the odometer is what service intervals are measured against. When a component goes past the interval you set, the number turns red — before you leave, while you can still do something about it, rather than halfway up a climb.</p>
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-shot"><img src="/img/list3.jpg" alt="NNCNC ride history list"></div>
+            <div class="feature-text">
+              <h3>Every ride. Yours to delete.</h3>
+              <p>Each finished ride lands in the history: date, distance, time, average and maximum speed, elevation gain, calories, and the route as a curve. All of it stays on the phone, in full, for as long as you keep the app.</p>
+              <p>And because it's yours, any ride can be deleted for good — a false start, a test, one you'd rather not keep. Deleted means gone. There is no copy on a server, no archive to restore from, nothing quietly retained.</p>
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-shot"><img src="/img/list4.jpg" alt="NNCNC shareable ride card with the route curve"></div>
+            <div class="feature-text">
+              <h3>Post the ride. Keep the address.</h3>
+              <p>Finish a ride and it becomes a card: your route drawn as a glowing line on black, with the numbers underneath. There is no map behind it — no streets, no labels, no pin on the house you set off from.</p>
+              <p>The shape means something to you and nothing to a stranger. Share it in a chat, post it, send it to a friend who rides. A screenshot from an ordinary tracker tells anyone who looks where you live. This one doesn't.</p>
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-shot"><img src="/img/list5.jpg" alt="NNCNC service interval settings"></div>
+            <div class="feature-text">
+              <h3>Set your own service intervals.</h3>
+              <p>You choose the interval for each component yourself — chain, brakes, cables — in kilometres, because kilometres are the unit wear actually happens in. The app counts from your last service and tells you what's coming due.</p>
+              <p>This isn't a pleasant extra. A chain wears out long before it ever breaks, and a worn chain grinds down the cassette and chainrings along with it. Replace it on time and it's a cheap consumable; miss it and you're buying the whole drivetrain. Brake pads are the same story with worse consequences. Most people don't track any of this, because nothing tracks it for them — a bike has no odometer of its own.</p>
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-shot"><img src="/img/list6.jpg" alt="NNCNC export and import data screen"></div>
+            <div class="feature-text">
+              <h3>New phone? Take it all with you.</h3>
+              <p>export data writes your entire history — every ride, every bike, every setting — into one file and hands it to the system share sheet. From there it's yours: save it to Files, drop it in iCloud Drive, send it to yourself in a message. import data reads it back on the new phone.</p>
+              <p>It works between iPhone and Android in both directions, and the file goes wherever you send it without passing through us. Changing phones shouldn't cost you three years of riding.</p>
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-shot"><img src="/img/list7.jpg" alt="NNCNC settings screen with no account options"></div>
+            <div class="feature-text">
+              <h3>Nothing to sign up for.</h3>
+              <p>No account, no email, no password, no profile to fill in. No analytics, no advertising, no crash reporting running in the background.</p>
+              <p>More to the point: there is no NNCNC server. Not a server we promise not to look at — infrastructure that was never built in the first place. Your rides stay on the phone because there is physically nowhere else for them to go, and the privacy label on the App Store reads Data Not Collected because there is nothing to collect.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="features-cta">
+          <a class="store-link" href="https://apps.apple.com/app/id6808987002">Download for iPhone →</a>
+        </div>
+      </section>
     <footer>
       <p>Designed and coded by iMakken &copy; 2026 NNCNC Lab · Individual Entrepreneur Andrei Akentev. All rights reserved.</p>
       <p><a href="/privacy">Privacy Policy</a></p>
